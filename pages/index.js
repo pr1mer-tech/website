@@ -1,65 +1,68 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Header from "../components/Header";
+import Section1 from "../components/Section1";
+import Section2 from "../components/Section2";
+import Section3 from "../components/Section3";
+import { Controller, Scene } from 'react-scrollmagic';
+import { Tween, Timeline } from 'react-gsap';
+import React from "react";
+import { Spacer } from "@geist-ui/react";
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+	const PanelStyle = {
+		height: "100vh",
+		width: "100vw",
+		position: "absolute",
+		background: "var(--background)"
+	}
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+	const controller = React.useRef(null)
+	const projects = React.useRef(null)
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+	return <>
+	<Controller loglevel={2} ref={ controller }>
+		<Scene triggerHook="onLeave" duration="150%" pin>
+			<Timeline wrapper={<div id="pinContainer" style={{
+				height: "100vh",
+    			width: "100vw",
+    			overflow: "hidden",
+			}} />}
+			>
+			<Tween from={{ x: '0%', opacity: 1 }} to={{ x: '50%', opacity: 0 }} position={0}>
+				<div style={ PanelStyle }>
+					<Header controller={ controller } projects={ projects }/>
+				</div>
+			</Tween>
+			<Tween from={{ x: '-100%', opacity: 0 }} to={{ x: '0%', opacity: 1 }} position={0}>
+				<div style={ PanelStyle }>
+					<Section1 />
+				</div>
+			</Tween>
+			<Tween
+				from={{ y: '100%', opacity: 0 }}
+				to={{ y: '0%', opacity: 1 }}
+			>
+				<div style={ PanelStyle }>
+					<Section2 />
+				</div>
+			</Tween>
+			<Tween
+				from={{ x: '100%', opacity: 0, rotation: -90 }}
+				to={{ x: '0%', opacity: 1, rotation: 0 }}
+			>
+				<div style={ PanelStyle } id="projects">
+					<Section3 />
+				</div>
+			</Tween>
+			</Timeline>
+		</Scene>
+		{/* <Scene duration="100%" pin={ true } indicators>
+			<Timeline>
+			
+			</Timeline>	
+		</Scene> */}
+		{/* <Scene duration="50%" offset={400} indicators>
+			
+		</Scene> */}
+	</Controller>
+	</>
 }

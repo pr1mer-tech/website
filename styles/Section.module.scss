@@ -1,0 +1,128 @@
+.container {
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+    width: calc(100vw - 35vw);
+    height: calc(100vh - 20vh);
+    display: flex;
+    justify-content: space-between;
+    // align-items: baseline;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.section1 {
+    position: relative;
+    height: 100vh;
+    .topLine {
+        position: absolute;
+        width: 100vw;
+        height: 0px;
+        left: 0px;
+        top: 10vh;
+        border-top: 1px solid #000;
+    }
+    .leftLine {
+        position: absolute;
+        width: 0px;
+        height: 100vh;
+        left: 10vw;
+        top: 0;
+        border-right: 1px solid #000;
+    }
+    .rightLine {
+        position: absolute;
+        width: 0px;
+        height: 100vh;
+        right: 10vw;
+        top: 0;
+        border-right: 1px solid #000;
+    }
+    .bottomLine {
+        position: absolute;
+        width: 100vw;
+        height: 0px;
+        left: 0px;
+        bottom: 10vh;
+        border-top: 1px solid #000;
+    }
+    .circle1 {
+        position: absolute;
+        width: 20vh;
+        height: 20vh;
+        bottom: 10vh;
+        left: 10vw;
+        transform: translateX(-50%);
+        border-radius: 100%;
+        border: 1px solid #000;
+    }
+    .circle2 {
+        position: absolute;
+        width: 20vh;
+        height: 20vh;
+        bottom: 10vh;
+        left: 10vw;
+        transform: translateY(50%);
+        border-radius: 100%;
+        border: 1px solid #000;
+    }
+    .rectangle {
+        position: absolute;
+        width: 20vh;
+        height: 20vh;
+        top: 10vh;
+        right: 10vw;
+        border: 1px solid #000;
+    }
+    .container .description {
+        max-width: 480px;
+        font-weight: 500;
+        font-size: 1em;
+        line-height: 1.4em;
+        letter-spacing: 0.1em;
+    }
+}
+
+@media (min-width: 1080px) {
+    .section1 .container .description {
+        font-size: 1.5em;
+        line-height: 1.7em;
+    }
+}
+
+.section2 {
+    &::before {
+        content: '';
+        background: url("../public/img/Computer.svg");
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        left: -30%;
+        opacity: .5;
+    }
+    .cards {
+        max-width: 580px;
+        height: 100%;
+        align-items: center;
+        .title {
+            font-family: var(--normalFont);
+            font-style: normal;
+            font-weight: 900;
+            font-size: 36px;
+            line-height: 43px;
+        }
+        .lines {
+            font-family: var(--normalFont);
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 27px;
+        }
+    }
+}
+
+.section3 {
+    position: relative;
+    height: 100vh;
+}

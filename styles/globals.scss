@@ -1,0 +1,62 @@
+@import url("https://cdn.jsdelivr.net/npm/sf-mono@1.0.0/stylesheet.min.css");
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: var(--monoFont) !important;
+}
+
+body {
+	// padding-top: 100px !important;
+	// margin-bottom: 500px !important;
+	background: var(--background);
+}
+
+#__next {
+	background: var(--background);
+	overflow-y: hidden;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+p.magnify {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+* {
+	z-index: 10;
+}
+
+:root {
+	color-scheme: light dark;
+	--blue: #1277EB;
+	--background: white;
+	--semi-white: #eee;
+	--text-color: #000;
+	--footer: #fafafa;
+	--secondary-text: rgb(102, 102, 102);
+	--transparentBack: rgba(255, 255, 255, 0.85);
+	--monoFont: sf_monobold;
+	--normalFont: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: #1e1e1e;
+		--transparentBack: rgba(30, 30, 30, 0.85);
+		--semi-white: #333;
+		--text-color: #fff;
+		--footer: #000;
+		--secondary-text: #eee;
+	}
+}

@@ -1,0 +1,25 @@
+.header {
+    height: 100vh;
+    background-image: url("../public/img/logo-stroke.svg");
+    background-position: -20%, 50%;
+    background-size: auto, 120%;
+    background-repeat: no-repeat;
+    .taglineContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .tagline {
+            max-width: 550px;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        >button {
+            margin: 12px;
+        }
+    }
+}
