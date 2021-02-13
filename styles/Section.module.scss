@@ -2,10 +2,10 @@
     position: absolute;
     top: 10vh;
     left: 10vw;
-    width: calc(100vw - 35vw);
+    width: calc(100vw - 20vw - 20px);
     height: calc(100vh - 20vh);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     // align-items: baseline;
     flex-wrap: wrap;
     padding: 20px;
@@ -82,8 +82,16 @@
         letter-spacing: 0.1em;
     }
 }
-
-@media (min-width: 1080px) {
+@media (max-height: 600px) {
+    .section1 .container {
+        display: block;
+        .description {
+            font-size: 0.9em;
+            line-height: 1.4em;
+        }
+    }
+}
+@media (min-width: 950px) {
     .section1 .container .description {
         font-size: 1.5em;
         line-height: 1.7em;
@@ -91,6 +99,10 @@
 }
 
 .section2 {
+    .container {
+        justify-content: flex-start;
+    }
+
     &::before {
         content: '';
         background: url("../public/img/Computer.svg");
@@ -102,9 +114,8 @@
         opacity: .5;
     }
     .cards {
-        max-width: 580px;
-        height: 100%;
         align-items: center;
+        cursor: pointer;
         .title {
             font-family: var(--normalFont);
             font-style: normal;
@@ -122,7 +133,23 @@
     }
 }
 
+@media (max-width: 900px) {
+    .section2 .cards {
+        .title {
+            font-size: 24px;
+            line-height: 36px;
+        }
+        img {
+            width: 100px;
+            height: 72px;
+        }
+    }
+}
+
 .section3 {
     position: relative;
     height: 100vh;
+    .container {
+        justify-content: flex-start;
+    }
 }

@@ -21,8 +21,8 @@ export default function SectionNumber({ n, name, ...props }) {
             position: absolute;
             font-style: normal;
             font-weight: 900;
-            font-size: 164px;
-            line-height: 172px;
+            font-size: 8.5em;
+            line-height: 9em;
             letter-spacing: 0.1em;
             -webkit-text-stroke: 1px var(--text-color);
             color: transparent;
@@ -32,6 +32,18 @@ export default function SectionNumber({ n, name, ...props }) {
             font-size: 24px;
             line-height: 29px;
             margin-left: 15px;
+        }
+        @media (max-height: 600px) {
+            .number {
+                font-size: 6em;
+                line-height: 6em;
+            }
+            .name {
+                font-size: 16px;
+            }
+            .section {
+                height: 70px;
+            }
         }
         `}</style>
     </div>

@@ -8,6 +8,12 @@
     "start": "next start",
     "export": "next export"
   },
+  "browserslist": [
+    "defaults",
+    "safari 11",
+    "last 2 years",
+    "not ie 11"
+  ],
   "dependencies": {
     "@geist-ui/react": "^2.1.0-canary.2",
     "gsap": "^3.6.0",

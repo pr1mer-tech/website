@@ -6,10 +6,16 @@
     background-repeat: no-repeat;
     .taglineContainer {
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         .tagline {
             max-width: 550px;
+            width: calc(100vw - 30px);
+            font-size: 2em;
+            span {
+                display: inline-block;
+                word-wrap: break-word;
+            }
         }
     }
 
