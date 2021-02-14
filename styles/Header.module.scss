@@ -1,9 +1,16 @@
 .header {
     height: 100vh;
-    background-image: url("../public/img/logo-stroke.svg");
-    background-position: -20%, 50%;
-    background-size: auto, 120%;
-    background-repeat: no-repeat;
+    &::before {
+        content: '';
+        background-image: url("../public/img/logo-stroke.svg");
+        background-size: cover;
+        width: 130vw;
+        height: 100vh;
+        position: absolute;
+        left: -30%;
+        opacity: .5;
+    }
+
     .taglineContainer {
         display: flex;
         align-items: center;
@@ -27,5 +34,11 @@
         >button {
             margin: 12px;
         }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .header::before {
+        filter: invert(1);
     }
 }

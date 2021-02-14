@@ -40,13 +40,26 @@ export default function Section3() {
     return <div className={ styles.section3 }>
         <div className={ styles.container }>
             <SectionNumber n={3} name="Our projects" />
-            <Grid.Container>
-                {
-                    projects.map(project => <Grid xs={6}>
+        </div>
+        <div className={ styles.carousel } id="projects">
+            <div className={ styles.c1 }>
+            {
+                projects.map(project => <div className={ styles.project }>
+                    <a href={ project.url }>
                         <Image src={ project.image } width={290} height={190} objectFit="cover" />
-                    </Grid>)
-                }
-            </Grid.Container>
+                    </a>
+                </div>)
+            }
+            </div>
+            <div className={ styles.c2 }>
+            {
+                projects.map(project => <div className={ styles.project }>
+                    <a href={ project.url }>
+                        <Image src={ project.image } width={290} height={190} objectFit="cover" />
+                    </a>
+                </div>)
+            }
+            </div>
         </div>
     </div>
 }

@@ -10,7 +10,7 @@ export default function Section2() {
 
     const services = {
         design: <>
-                <img src={ "/img/Design.svg" } width={140} height={100} />
+                <img src={ "/img/Design.svg" } width={140} height={100} className={ styles.s2img } />
                 <Divider type="dark" />
                 <Text h1 className={ styles.title }>DESIGN</Text>
                 <Collapse.Group style={{ fontFamily: "var(--monoMediumFont)" }}>
@@ -30,7 +30,7 @@ export default function Section2() {
                 </Collapse.Group>
                 </>,
         code: <>
-            <img src={ "/img/Code.svg" } width={140} height={100} />
+            <img src={ "/img/Code.svg" } width={140} height={100} className={ styles.s2img } />
             <Divider type="dark" />
             <Text h1 className={ styles.title }>CODE</Text>
             <Collapse.Group style={{ fontFamily: "var(--monoMediumFont)" }}>
@@ -50,7 +50,7 @@ export default function Section2() {
             </Collapse.Group>
             </>,
         deploy: <>
-                <img src={ "/img/Deploy.svg" } width={140} height={100} />
+                <img src={ "/img/Deploy.svg" } width={140} height={100} className={ styles.s2img } />
                 <Divider type="dark" />
                 <Text h1 className={ styles.title }>DEPLOY</Text>
                 <Collapse.Group style={{ fontFamily: "var(--monoMediumFont)" }}>
@@ -89,7 +89,7 @@ export default function Section2() {
                     <Text h1 className={ styles.title }>DEPLOY</Text>
                 </Grid>
             </Grid.Container>
-            <Modal {...bindings} width="45rem">
+            <Modal {...bindings} width="45rem" className={ styles.modal }>
             <Modal.Content>
                 { services[section] }
             </Modal.Content>

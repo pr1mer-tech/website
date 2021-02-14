@@ -20,7 +20,7 @@
         height: 0px;
         left: 0px;
         top: 10vh;
-        border-top: 1px solid #000;
+        border-top: 1px solid var(--text-color);
     }
     .leftLine {
         position: absolute;
@@ -28,7 +28,7 @@
         height: 100vh;
         left: 10vw;
         top: 0;
-        border-right: 1px solid #000;
+        border-right: 1px solid var(--text-color);
     }
     .rightLine {
         position: absolute;
@@ -36,7 +36,7 @@
         height: 100vh;
         right: 10vw;
         top: 0;
-        border-right: 1px solid #000;
+        border-right: 1px solid var(--text-color);
     }
     .bottomLine {
         position: absolute;
@@ -44,7 +44,7 @@
         height: 0px;
         left: 0px;
         bottom: 10vh;
-        border-top: 1px solid #000;
+        border-top: 1px solid var(--text-color);
     }
     .circle1 {
         position: absolute;
@@ -54,7 +54,7 @@
         left: 10vw;
         transform: translateX(-50%);
         border-radius: 100%;
-        border: 1px solid #000;
+        border: 1px solid var(--text-color);
     }
     .circle2 {
         position: absolute;
@@ -64,7 +64,7 @@
         left: 10vw;
         transform: translateY(50%);
         border-radius: 100%;
-        border: 1px solid #000;
+        border: 1px solid var(--text-color);
     }
     .rectangle {
         position: absolute;
@@ -72,7 +72,7 @@
         height: 20vh;
         top: 10vh;
         right: 10vw;
-        border: 1px solid #000;
+        border: 1px solid var(--text-color);
     }
     .container .description {
         max-width: 480px;
@@ -146,10 +146,52 @@
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    .section2 img {
+        filter: invert(1);
+    }
+
+    .s2img {
+        filter: invert(1);
+    }
+}
 .section3 {
     position: relative;
     height: 100vh;
     .container {
         justify-content: flex-start;
+    }
+    .carousel {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        display: inline-block;
+        white-space: nowrap;
+        position: relative;
+        width: max-content;
+        .c1, .c2 {
+            display: inline-block;
+            width: max-content;
+            white-space: nowrap;
+            animation: slide 40s linear infinite;
+            >div {
+                display: inline-block;
+            }
+            .project {
+                padding: 5px;
+                border: 1px solid var(--text-color);
+                margin: 10px;
+            }
+        }
+    }
+}
+
+@keyframes slide {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(-100%, 0, 0);
     }
 }
