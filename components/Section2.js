@@ -63,7 +63,7 @@ export default function Section2() {
                         We run our services on the fastest edge network, milliseconds from end users – up to 115% faster than competing platforms. This network help us making sure everything remains fast, secure but also to stay ahead of the curve by supporting for the latest web standards with HTTP/3, QUIC, image compression out of the box, and more.
                     </Collapse>
                     <Collapse title="Exceptionally affordable">
-                        We deploy your site/app with your portfolio. Nobody likes to spend astronomical sums of money to maintain a site, that's why we try to offer the lowest possible rates according to our suppliers.
+                        We deploy your site/app with your budget in mind. Nobody likes to spend astronomical sums of money to maintain a site, that's why we try to offer the lowest possible rates according to our suppliers.
                     </Collapse>
                 </Collapse.Group>
                 </>

@@ -54,7 +54,7 @@ export default function Section3() {
             <div className={ styles.c2 }>
             {
                 projects.map(project => <div className={ styles.project }>
-                    <a href={ project.url }>
+                    <a href={ project.url } target="_blank">
                         <Image src={ project.image } width={290} height={190} objectFit="cover" />
                     </a>
                 </div>)
