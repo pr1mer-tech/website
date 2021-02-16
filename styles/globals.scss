@@ -61,3 +61,22 @@ p.magnify {
 		--secondary-text: #eee;
 	}
 }
+
+
+// Animation
+
+.slide-jsx-carousel {
+	#projects-slide > div {
+		animation: slide 40s linear infinite;
+	}
+}
+
+@keyframes slide {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(-100%, 0, 0);
+    }
+}

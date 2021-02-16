@@ -45,24 +45,20 @@ export default function Home() {
 					<Section2 />
 				</div>
 			</Tween>
-			<Tween
-				from={{ x: '100%', opacity: 0, rotation: -90 }}
-				to={{ x: '0%', opacity: 1, rotation: 0 }}
-			>
-				<div style={ PanelStyle } id="projects">
-					<Section3 />
-				</div>
-			</Tween>
 			</Timeline>
 		</Scene>
-		{/* <Scene duration="100%" pin={ true } indicators>
+		<Scene duration="150%" pin={ true } triggerHook="onEnter" classToggle="slide-jsx-carousel">
 			<Timeline>
-			
-			</Timeline>	
-		</Scene> */}
-		{/* <Scene duration="50%" offset={400} indicators>
-			
-		</Scene> */}
+				<Tween
+					from={{ x: '100%', y: '0%', opacity: 0, rotation: -90 }}
+					to={{ x: '0%', y: '-100%', opacity: 1, rotation: 0 }}
+				>
+					<div style={ PanelStyle } id="projects">
+						<Section3 />
+					</div>
+				</Tween>
+			</Timeline>
+		</Scene>
 	</Controller>
 	</>
 }

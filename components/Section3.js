@@ -41,7 +41,7 @@ export default function Section3() {
         <div className={ styles.container }>
             <SectionNumber n={3} name="Our projects" />
         </div>
-        <div className={ styles.carousel } id="projects">
+        <div className={ styles.carousel } id="projects-slide">
             <div className={ styles.c1 }>
             {
                 projects.map(project => <div className={ styles.project }>
