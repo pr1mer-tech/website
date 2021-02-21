@@ -5,7 +5,9 @@ import Section3 from "../components/Section3";
 import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
 import React from "react";
-import { Spacer } from "@geist-ui/react";
+import { Text } from "@geist-ui/react";
+import Footer from "../components/Footer";
+import Work from "../components/Work";
 
 export default function Home() {
 	const PanelStyle = {
@@ -57,8 +59,24 @@ export default function Home() {
 						<Section3 />
 					</div>
 				</Tween>
+				<Tween
+					from={{ width: "0%", y: '-100%', x: "50%" }}
+					to={{ width: '100%', y: '-100%', x: "0%" }}
+				>
+					<div style={{
+						height: "100vh",
+						width: "100vw",
+						position: "absolute",
+						background: "var(--background)",
+						filter: "invert(1)",
+						overflow: "hidden"
+					}}>
+						<Work />
+					</div>
+				</Tween>
 			</Timeline>
 		</Scene>
 	</Controller>
+	<Footer />
 	</>
 }

@@ -1,0 +1,15 @@
+.footer {
+    min-height: 300px;
+    padding: 0 20px 50px 20px;
+    .social {
+
+        a {
+            display: flex;
+            color: inherit;
+            margin: 15px 0;
+            svg {
+                margin-right: 5px;
+            }
+        }
+    }
+}
