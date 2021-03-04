@@ -1,7 +1,5 @@
 import styles from "../styles/Section.module.scss"
-import SectionNumber from "./Low/SectionNumber"
-import { Divider, Grid, Text } from "@geist-ui/react"
-import { ArrowRight } from '@geist-ui/react-icons'
+import Link from "next/link"
 
 export default function Work() {
     return <div className={ styles.work }>
@@ -9,9 +7,11 @@ export default function Work() {
             <div className={styles.let}>
                 Let's work
             </div>
-            <div className={ styles.together }>
-                Together ➔
-            </div>
+            <Link href="/contact">
+                <a className={ styles.together }>
+                    Together ➔
+                </a>
+            </Link>
         </div>
     </div>
 }

@@ -1,4 +1,5 @@
 import { Col, Grid, Text } from "@geist-ui/react";
+import Link from "next/link";
 import styles from "../styles/Header.module.scss"
 import CustomButton from "./Low/Button";
 import TypeWriter from "./Low/TypeWriter"
@@ -15,7 +16,7 @@ export default function Header({ controller, projects }) {
             </Text>
         </Grid>
         <Grid xs={24} md={8} className={ styles.buttons }>
-            <CustomButton type="secondary">Contact Us</CustomButton>
+            <Link href="/contact"><CustomButton type="secondary">Contact Us</CustomButton></Link>
             <CustomButton onClick={() => controller.current.state.controller.scrollTo("#projects") }>See our projects</CustomButton>
         </Grid>
     </Grid.Container>

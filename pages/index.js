@@ -5,7 +5,6 @@ import Section3 from "../components/Section3";
 import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
 import React from "react";
-import { Text } from "@geist-ui/react";
 import Footer from "../components/Footer";
 import Work from "../components/Work";
 

@@ -44,7 +44,7 @@ export default function Section3() {
         <div className={ styles.carousel } id="projects-slide">
             <div className={ styles.c1 }>
             {
-                projects.map(project => <div className={ styles.project }>
+                projects.map(project => <div className={ styles.project } key={ project.name }>
                     <a href={ project.url }>
                         <Image src={ project.image } width={290} height={190} objectFit="cover" />
                     </a>
@@ -53,7 +53,7 @@ export default function Section3() {
             </div>
             <div className={ styles.c2 }>
             {
-                projects.map(project => <div className={ styles.project }>
+                projects.map(project => <div className={ styles.project } key={ project.name }>
                     <a href={ project.url } target="_blank">
                         <Image src={ project.image } width={290} height={190} objectFit="cover" />
                     </a>
