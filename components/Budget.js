@@ -22,6 +22,10 @@ export default function Budget() {
             inferior: true
         }],
         "350$": [{
+            name: "Cost effective hosting and deployment",
+            info: "We'll discuss with you on how we can optimize your costs",
+            inferior: true
+        }, {
             name: "Landing page",
             info: "We'll design, code and help you deploy a landing page",
             inferior: true
@@ -32,6 +36,9 @@ export default function Budget() {
             inferior: true
         }],
         "650$": [{
+            name: "Cost effective hosting and deployment",
+            info: "We'll discuss with you on how we can optimize your costs"
+        }, {
             name: "Medium website",
             info: "We'll design, code and help you deploy your medium website",
             inferior: true
@@ -40,9 +47,6 @@ export default function Budget() {
             name: "Complex website",
             info: "We'll design, code and help you deploy your complex website (ex: e-commerce)",
             inferior: true
-        }, {
-            name: "Cost effective hosting and deployment",
-            info: "We'll discuss with you on how we can optimize your costs"
         }],
         "2000$": [{
             name: "Mobile app",
