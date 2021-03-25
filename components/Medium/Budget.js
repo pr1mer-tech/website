@@ -1,12 +1,12 @@
-import { Card, Row, Spacer, Text, Tooltip } from "@geist-ui/react";
-import Slider from "./Low/Slider/Slider";
-import styles from "../styles/Budget.module.scss"
+import { Button, Card, Row, Spacer, Text, Tooltip } from "@geist-ui/react";
+import Slider from "../Low/Slider/Slider";
+import styles from "../../styles/Budget.module.scss"
 import { useState } from "react";
-import { Check, Info } from "@geist-ui/react-icons";
+import { Check, Info, Minus, Plus } from "@geist-ui/react-icons";
 
 export default function Budget() {
     const [budget, setBudget] = useState(4)
-    const marks = [150, 250, 350, 450, 650, 1000, 2000].map(e => String(e) + "$")
+    const marks = [150, 250, 350, 450, 750, 1000, 2000].map(e => String(e) + "$")
 
     const features = {
         "150$": [{ 
@@ -35,7 +35,7 @@ export default function Budget() {
             info: "We'll help you design your website/app (medium, around 5 pages or with limited dynamic functionalities)",
             inferior: true
         }],
-        "650$": [{
+        "750$": [{
             name: "Cost effective hosting and deployment",
             info: "We'll discuss with you on how we can optimize your costs"
         }, {
@@ -77,7 +77,12 @@ export default function Budget() {
     return <Card shadow className={ styles.budget }>
         <Text h3>What's your budget?</Text>
         <Spacer y={1} />
-        <Slider className={ styles.slider } step={1} min={1} max={7} value={budget} onChange={setBudget} marks={marks}/>
+        <Row align="middle" className={ styles.sliderRow }>
+            <Button iconRight={<Minus />} auto size="small" onClick={() => setBudget(budget > 1 ? budget - 1 : 1)} disabled={budget == 1} />
+            <Slider className={ styles.slider } step={1} min={1} max={7} value={budget} onChange={setBudget} marks={marks}/>
+            <Button iconRight={<Plus />} auto size="small" onClick={() => setBudget(budget < 7 ? budget + 1 : 7)} disabled={budget == 7} />
+        </Row>
+        
         <Spacer y={3} />
         <Text h2>For {marks[budget - 1]}, you get<sup style={{ fontSize: "18px", opacity: .5 }}>*</sup>:</Text>
         {

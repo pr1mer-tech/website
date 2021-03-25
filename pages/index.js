@@ -59,8 +59,13 @@ export default function Home() {
 					</div>
 				</Tween>
 				<Tween
-					from={{ width: "0%", y: '-100%', x: "50%" }}
-					to={{ width: '100%', y: '-100%', x: "0%" }}
+					from={{ width: "0%", y: '-100%', x: "50%", opacity: 0 }}
+					to={{ width: '100%', y: '-100%', x: "0%", opacity: 1 }}
+					ease={x => {
+						if (x < 0.5) return 0
+						const a = 2*x*x - 0.5
+						return a > 1 ? 1 : a
+					}}
 				>
 					<div style={{
 						height: "100vh",

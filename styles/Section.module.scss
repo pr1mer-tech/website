@@ -161,26 +161,27 @@
     .container {
         justify-content: flex-start;
     }
-    .carousel {
-        position: absolute;
-        left: 0;
-        top: 50%;
+}
+
+.carousel {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    display: inline-block;
+    white-space: nowrap;
+    position: relative;
+    width: max-content;
+    .c1, .c2 {
         display: inline-block;
-        white-space: nowrap;
-        position: relative;
         width: max-content;
-        .c1, .c2 {
+        white-space: nowrap;
+        >div {
             display: inline-block;
-            width: max-content;
-            white-space: nowrap;
-            >div {
-                display: inline-block;
-            }
-            .project {
-                padding: 5px;
-                border: 1px solid var(--text-color);
-                margin: 10px;
-            }
+        }
+        .project {
+            padding: 5px;
+            border: 1px solid var(--text-color);
+            margin: 10px;
         }
     }
 }
