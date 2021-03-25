@@ -24,3 +24,8 @@
         position: static;
     }
 }
+@media (prefers-color-scheme: dark) {
+    .navbar .logo {
+        filter: invert(1);
+    }
+}
