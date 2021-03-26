@@ -7,6 +7,7 @@ import { Tween, Timeline } from 'react-gsap';
 import React from "react";
 import Footer from "../components/Footer";
 import Work from "../components/Work";
+import Head from "next/head"
 
 export default function Home() {
 	const PanelStyle = {
@@ -20,6 +21,11 @@ export default function Home() {
 	const projects = React.useRef(null)
 
 	return <>
+	<Head>
+		<meta name="description" content={
+			"Pr1mer is a web agency runned by a constantly renewed team of independent developers, designers, and creators wishing to launch themselves in the \"freelance\" movement."
+		} />
+	</Head>
 	<Controller loglevel={2} ref={ controller }>
 		<Scene triggerHook="onLeave" duration="150%" pin>
 			<Timeline wrapper={<div id="pinContainer" style={{

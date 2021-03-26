@@ -37,7 +37,7 @@ export const projects = [{
 
 export default function Projects({ active=false }) {
     return <div className={ styles.carousel } id="projects-slide">
-        <div className={ styles.c1 } style={ active ? {animation: "slide 40s linear infinite"} : {}}>
+        <div className={ styles.c1 } style={ active ? {animation: "slide 30s linear infinite"} : {}}>
         {
             projects.map(project => <div className={ styles.project } key={ project.name }>
                 <a href={ project.url }>
@@ -51,7 +51,7 @@ export default function Projects({ active=false }) {
             </div>)
         }
         </div>
-        <div className={ styles.c2 } style={ active ? {animation: "slide 40s linear infinite"} : {}}>
+        <div className={ styles.c2 } style={ active ? {animation: "slide 30s linear infinite"} : {}}>
         {
             projects.map(project => <div className={ styles.project } key={ project.name }>
                 <a href={ project.url } target="_blank">
