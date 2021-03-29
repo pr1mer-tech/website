@@ -194,7 +194,7 @@
     align-items: center;
     cursor: pointer;
     --size: 5.3rem;
-    --size-t: 4.5rem;
+    --size-t: 3rem;
     --size-m: 2.5rem;
     font-family: var(--normalFont);
     min-width: 100vw;
@@ -218,14 +218,18 @@
 }
 
 @media (max-width: 600px) {
-    .work .let, .together {
-        font-size: var(--size-m);
-        text-align: center;
-        max-width: initial;
+    .work {
+        .let, .together {
+            font-size: var(--size-m);
+            text-align: center;
+            max-width: initial;
+        }
     }
 }
 @media (max-width: 1024px) {
-    .work .let, .together {
-        font-size: var(--size-t);
+    .work {
+        .let, .together {
+            font-size: var(--size-t);
+        }
     }
 }
