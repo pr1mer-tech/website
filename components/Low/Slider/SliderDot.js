@@ -12,12 +12,12 @@ const defaultProps = {
     disabled: false,
     isClick: false
 };
-const SliderDot = React.forwardRef(({
+const SliderDot = React.forwardRef(function SliderDot({
             children,
             disabled,
             left,
             isClick
-        }, ref) => {
+        }, ref) {
 const theme = useTheme();
 return (
     <div className={`dot ${disabled ? 'disabled' : '' } ${isClick ? 'click' : '' }`} ref={ref}>

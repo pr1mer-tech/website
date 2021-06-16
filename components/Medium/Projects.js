@@ -54,7 +54,7 @@ export default function Projects({ active=false }) {
         <div className={ styles.c2 } style={ active ? {animation: "slide 30s linear infinite"} : {}}>
         {
             projects.map(project => <div className={ styles.project } key={ project.name }>
-                <a href={ project.url } target="_blank">
+                <a href={ project.url } target="_blank" rel="noreferrer">
                     {
                         active == false && <Image src={ project.image } width={290} height={190} objectFit="cover" />
                     }

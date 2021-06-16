@@ -86,7 +86,7 @@ export default function Budget() {
         <Spacer y={3} />
         <Text h2>For {marks[budget - 1]}, you get<sup style={{ fontSize: "18px", opacity: .5 }}>*</sup>:</Text>
         {
-            getFeatures(budget).map(f => <Row style={{ marginBottom: '15px' }}>
+            getFeatures(budget).map(f => <Row style={{ marginBottom: '15px' }} key={ f.name }>
                 <Check />
                 <Text b style={{ marginLeft: '15px' }}>{ f.name }</Text>
                 <Tooltip text={ f.info } type="dark" style={{ marginTop: '3px', marginLeft: '10px' }}>

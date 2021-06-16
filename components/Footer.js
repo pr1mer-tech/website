@@ -22,8 +22,8 @@ export default function Footer() {
             <Divider />
             <Text h3>Contact</Text>
             <div className={ styles.social }>
-                <a href="https://github.com/pr1mer-tech" target="_blank"><Github /> Github</a>
-                <a href="https://twitter.com/pr1mertech" target="_blank"><Twitter /> Twitter</a>
+                <a href="https://github.com/pr1mer-tech" target="_blank" rel="noreferrer"><Github /> Github</a>
+                <a href="https://twitter.com/pr1mertech" target="_blank" rel="noreferrer"><Twitter /> Twitter</a>
             </div>
             
         </Grid>
